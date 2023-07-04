@@ -21,8 +21,12 @@ class homepage_activity : AppCompatActivity()  {
     private lateinit var to:Spinner
     private lateinit var checkbtn:Button
     private lateinit var layout:LinearLayout
+
     private lateinit var result:String
     private lateinit var result1:String
+
+    var busMap = mutableMapOf<String, Bus>()
+
 
     @SuppressLint("MissingInflatedId", "ResourceType", "SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,7 +75,7 @@ class homepage_activity : AppCompatActivity()  {
         }
 
         var isCheckBtnClicked:Boolean = false
-        val busMap = mutableMapOf<String, Bus>()
+
 
         busMap["Hyderabad"] = Bus(1212 ,"9:00AM" , "12:00PM" ,200.23 , 30 , 20 ,8555555122 , "Hyderabad" , "Pune"  )
         busMap["Hyderabad"] = Bus(1222 ,"10:00AM" , "6:00PM" ,600.23 , 30 , 20 ,8555255122 , "Hyderabad" , "Banglore"  )
@@ -159,7 +163,11 @@ class homepage_activity : AppCompatActivity()  {
 //        toPlaceTV.text = ab.ToPlac
 
         bookbtn.setOnClickListener {
-            startActivity(Intent(this , BookingPage::class.java))
+
+            val intent = Intent(this, BookingPage::class.java)
+            intent.putExtra("id", ab.id)
+            intent.putExtra("bus" , result)
+            startActivity(intent)
         }
 
         layout.addView(view)
