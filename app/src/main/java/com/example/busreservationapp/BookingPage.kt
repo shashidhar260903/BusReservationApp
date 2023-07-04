@@ -32,7 +32,7 @@ class BookingPage : AppCompatActivity() {
         date = findViewById(R.id.date)
 
         val id  = intent.getIntExtra("id", 0).toString()
-        val fbus = homepage_activity.busMap[intent.getStringExtra("bus")]
+//        val fbus = homepage_activity.busMap[intent.getStringExtra("bus")]
         var StartTime:String = ""
         var EndTime:String = ""
         var Price:Double = 0.0
