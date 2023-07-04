@@ -47,7 +47,8 @@
         app:layout_constraintTop_toBottomOf="@+id/button3"
         app:layout_constraintVertical_bias="0.073"
         app:srcCompat="@drawable/admin"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/bag" />
 
     <TextView
         android:id="@+id/textView5"
