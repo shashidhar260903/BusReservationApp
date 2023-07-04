@@ -1,50 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#F8E8EE"
+        android:textAlignment="center">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius = "10dp"
+            app:cardCornerRadius="10dp"
             app:cardElevation="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
                 android:padding="10dp">
 
-                <EditText
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="401dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/poppins_extrabold"
+                    android:text="Bus Tickets"
+                    android:textAlignment="center"
+                    android:textColor="#F2BED1"
+                    android:textSize="24sp" />
+
+                <Spinner
                     android:id="@+id/from"
-                    android:layout_width="329dp"
-                    android:layout_height="56dp"
+                    android:layout_width="390dp"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="60dp"
+                    android:textAlignment="center"
+                    tools:ignore="TouchTargetSizeCheck" />
 
-                    android:hint="From"
-                    android:padding="5dp"></EditText>
-
-                <EditText
+                <Spinner
                     android:id="@+id/to"
-                    android:layout_width="331dp"
-                    android:layout_height="49dp"
-                    android:layout_marginTop="100dp"
-                    android:hint="To"
-                    android:padding="5dp"></EditText>
+                    android:layout_width="392dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="center"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <Button
                     android:id="@+id/check"
-                    android:layout_width="wrap_content"
+                    android:layout_width="239dp"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="false"
-                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="70dp"
                     android:layout_marginTop="200dp"
-                    android:letterSpacing="0.3"
-                    android:padding="4dp"
-                    android:text="Check"></Button>
+                    android:text="Search Buses" />
+
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -53,16 +67,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="270dp"
-            >
+            android:background="@color/white"
+            tools:ignore="SpeakableTextPresentCheck">
+
             <LinearLayout
                 android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:orientation="vertical"
-                ></LinearLayout>
+                android:padding="10dp" />
 
         </ScrollView>
+
+
+
 
     </RelativeLayout>
 
