@@ -73,8 +73,12 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="43dp"
-        android:backgroundTint="#F2BED1"
-        android:text="Login"
+
+
+        android:background="#673AB7"
+        android:fontFamily="@font/poppins_thin"
+        android:text="LOGIN"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

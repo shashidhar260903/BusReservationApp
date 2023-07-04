@@ -19,9 +19,11 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         // This method is called when a message is received while the app is in the foreground
         println("message is = ${remoteMessage.data}")
 
+
     }
 
     companion object {
         private const val TAG = "MyFirebaseMessagingService"
     }
+
 }
