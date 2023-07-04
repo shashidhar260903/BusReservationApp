@@ -17,6 +17,7 @@ class homepage_activity : AppCompatActivity()  {
     private lateinit var to:EditText
     private lateinit var checkbtn:Button
     private lateinit var layout:LinearLayout
+    var busMap = mutableMapOf<String, Bus>()
 
     @SuppressLint("MissingInflatedId", "ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +30,7 @@ class homepage_activity : AppCompatActivity()  {
         layout = findViewById(R.id.container)
 
         var isCheckBtnClicked:Boolean = false
-        val busMap = mutableMapOf<String, Bus>()
+
 
         busMap["A"] = Bus(1212 ,"1:00AM" , "2:00PM" ,200.23 , 30 , 20 ,8555555122 , "AWDASFASD" , "BASD"  )
         busMap["B"] = Bus(1232 ,"2:00AM" , "2:00PM" ,200.23 , 30 , 20 ,8555555122 , "BASDSADF" , "BASDF"  )
@@ -95,7 +96,11 @@ class homepage_activity : AppCompatActivity()  {
 //        toPlaceTV.text = ab.ToPlac
 
         bookbtn.setOnClickListener {
-            startActivity(Intent(this , BookingPage::class.java))
+
+            val intent = Intent(this, BookingPage::class.java)
+            intent.putExtra("id", ab.id)
+            intent.putExtra("bus" , from.text.toString())
+            startActivity(intent)
         }
 
         layout.addView(view)
